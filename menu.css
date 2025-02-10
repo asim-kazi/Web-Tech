@@ -1,0 +1,13 @@
+nav {
+    font-size: larger;
+    text-align:right;
+    background-attachment: fixed;
+
+}
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration:underline;
+    margin-right: 10px;
+    list-style:square;
+    background-attachment: fixed;   
+}
