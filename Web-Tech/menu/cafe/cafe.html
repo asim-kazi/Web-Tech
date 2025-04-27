@@ -1,159 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adi's Cafe Menu</title>
-    <style>
-        :root {
-            --primary-color: #4e342e;
-            --secondary-color: #f5f5f5;
-            --accent-color: #ff6f00;
-            --text-color: #333;
-            --light-bg: #fff;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .cafe-name {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            font-family: 'Georgia', serif;
-        }
-        .cafe-tagline {
-            font-style: italic;
-            font-size: 1.2rem;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        .menu-navigation {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .menu-btn {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 1rem;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-        .menu-btn:hover, .menu-btn.active {
-            background-color: var(--accent-color);
-            color: var(--text-color);
-            transform: translateY(-2px);
-        }
-        .menu-section {
-            display: none;
-            margin-bottom: 3rem;
-        }
-        .menu-section.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-            position: relative;
-            padding-bottom: 10px;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background-color: var(--accent-color);
-        }
-        .menu-items {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        .menu-item {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .menu-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-        .item-content {
-            padding: 1rem;
-        }
-        .item-name {
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-            color: var(--primary-color);
-        }
-        .item-description {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 1rem;
-        }
-        .item-price {
-            font-weight: bold;
-            color: var(--accent-color);
-            font-size: 1.1rem;
-        }
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 1.5rem 0;
-            margin-top: 2rem;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @media (max-width: 768px) {
-            .menu-items {
-                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            }
-            .container {
-                padding: 1rem;
-            }
-            .cafe-name {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="/Web-Tech/menu/cafe/cafe.css" />
+  </head>
+  <body>
     <header>
-        <h1 class="cafe-name">Adi's Cafe</h1>
-        <p class="cafe-tagline">Delicious Food, Great Ambiance</p>
+      <h1 class="cafe-name">Adi's Cafe</h1>
+      <p class="cafe-tagline">Delicious Food, Great Ambiance</p>
     </header>
     <div class="container">
       <div class="menu-navigation">
@@ -171,637 +27,747 @@
         <button class="menu-btn" data-category="coffees">Coffees</button>
         <button class="menu-btn" data-category="shakes">Shakes</button>
         <button class="menu-btn" data-category="desserts">Desserts</button>
-    </div>
+      </div>
 
-        <!-- Pizzas Section -->
-        <div class="menu-section active" id="pizzas">
-            <h2 class="section-title">🍕 Pizzas</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Margherita</h3>
-                        <p class="item-description">Classic cheese pizza with rich tomato base.</p>
-                        <p class="item-price">₹115</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Spice Overloaded</h3>
-                        <p class="item-description">A spicy combo of bell peppers and cottage cheese.</p>
-                        <p class="item-price">₹165</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Cheese & Cheese</h3>
-                        <p class="item-description">Double cheese delight topped with tomatoes.</p>
-                        <p class="item-price">₹145</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Fresh Veg</h3>
-                        <p class="item-description">Simple and fresh with onions, capsicum, and tomatoes.</p>
-                        <p class="item-price">₹155</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Italian Pizza</h3>
-                        <p class="item-description">European twist with olives, jalapenos, and onions.</p>
-                        <p class="item-price">₹155</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Cheese Burst</h3>
-                        <p class="item-description">Crust filled with molten cheese and generous toppings.</p>
-                        <p class="item-price">₹235</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Golden Pizza</h3>
-                        <p class="item-description">Cheesy pizza loaded with sweet corn.</p>
-                        <p class="item-price">₹145</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Green House</h3>
-                        <p class="item-description">A veggie mix of onions, capsicum, mushrooms & tomatoes.</p>
-                        <p class="item-price">₹155</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Indian Hot</h3>
-                        <p class="item-description">Spicy mozzarella pizza with olives and jalapenos.</p>
-                        <p class="item-price">₹155</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Adi's Special</h3>
-                        <p class="item-description">Signature pizza with olives, baby corn, and mixed veggies.</p>
-                        <p class="item-price">₹195</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Paneer Peprika</h3>
-                        <p class="item-description">Marinated paneer with peppers and capsicum.</p>
-                        <p class="item-price">₹165</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Schezwan Paneer</h3>
-                        <p class="item-description">Indo-Chinese pizza with spicy Schezwan paneer.</p>
-                        <p class="item-price">₹165</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Tandoori Paneer</h3>
-                        <p class="item-description">Desi twist with smoky tandoori paneer.</p>
-                        <p class="item-price">₹165</p>
-                    </div>
-                </div>
+      <!-- Pizzas Section -->
+      <div class="menu-section active" id="pizzas">
+        <h2 class="section-title">🍕 Pizzas</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Margherita</h3>
+              <p class="item-description">
+                Classic cheese pizza with rich tomato base.
+              </p>
+              <p class="item-price">₹115</p>
             </div>
-        </div>
-
-        <!-- Sandwiches Section -->
-        <div class="menu-section" id="sandwiches">
-            <h2 class="section-title">🥪 Sandwiches</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Veg Tikka</h3>
-                        <p class="item-description">Veggies grilled in tikka masala, layered with sauces.</p>
-                        <p class="item-price">₹95</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Cheese Pocket</h3>
-                        <p class="item-description">Stuffed with cheese and green chutney for a flavorful bite.</p>
-                        <p class="item-price">₹90</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Club Sandwich</h3>
-                        <p class="item-description">Classic 4-layered sandwich with cheese and mayo.</p>
-                        <p class="item-price">₹125</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Mexican Sandwich</h3>
-                        <p class="item-description">Tangy veg filling with aloo tikki for a spicy punch.</p>
-                        <p class="item-price">₹100</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Spinach & Corn</h3>
-                        <p class="item-description">Healthy and cheesy mix of spinach and sweet corn.</p>
-                        <p class="item-price">₹105</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Thai Paneer</h3>
-                        <p class="item-description">Exotic Thai-flavored paneer with cheese.</p>
-                        <p class="item-price">₹105</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Paneer Tikka</h3>
-                        <p class="item-description">Spicy paneer with onion-cashew blend and cheese.</p>
-                        <p class="item-price">₹110</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Crunchy Paneer</h3>
-                        <p class="item-description">Crunchy and cheesy paneer sandwich with garlic flavor.</p>
-                        <p class="item-price">₹110</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Jawali Sandwich</h3>
-                        <p class="item-description">Triple-layer sandwich with creamy mayo.</p>
-                        <p class="item-price">₹85</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Aloo Tikki</h3>
-                        <p class="item-description">North Indian favorite with mayo and crunchy tikki.</p>
-                        <p class="item-price">₹75</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Mayonnaise</h3>
-                        <p class="item-description">Simple yet tasty, with a rich mayo spread.</p>
-                        <p class="item-price">₹60</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-section" id="pasta">
-          <h2 class="section-title">🍝 Pasta</h2>
-          <div class="menu-items">
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">White Sauce Pasta</h3>
-                      <p class="item-description">Creamy and rich, loaded with vegetables.</p>
-                      <p class="item-price">₹170</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Red Sauce Pasta</h3>
-                      <p class="item-description">Tangy tomato base with spices and herbs.</p>
-                      <p class="item-price">₹175</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Pink Sauce Pasta</h3>
-                      <p class="item-description">Perfect mix of red and white sauces.</p>
-                      <p class="item-price">₹205</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Schezwan Pasta</h3>
-                      <p class="item-description">Spicy Indo-Chinese pasta with zingy Schezwan flavor.</p>
-                      <p class="item-price">₹210</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Nachos Pasta</h3>
-                      <p class="item-description">Crunchy nachos topped with cheesy pasta.</p>
-                      <p class="item-price">₹215</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Cheese Filled Pasta</h3>
-                      <p class="item-description">Extra cheesy, stuffed pasta goodness.</p>
-                      <p class="item-price">₹215</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Adi Mix Pasta</h3>
-                      <p class="item-description">House special spicy-creamy pasta combo.</p>
-                      <p class="item-price">₹215</p>
-                  </div>
-              </div>
           </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Spice Overloaded</h3>
+              <p class="item-description">
+                A spicy combo of bell peppers and cottage cheese.
+              </p>
+              <p class="item-price">₹165</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Cheese & Cheese</h3>
+              <p class="item-description">
+                Double cheese delight topped with tomatoes.
+              </p>
+              <p class="item-price">₹145</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Fresh Veg</h3>
+              <p class="item-description">
+                Simple and fresh with onions, capsicum, and tomatoes.
+              </p>
+              <p class="item-price">₹155</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Italian Pizza</h3>
+              <p class="item-description">
+                European twist with olives, jalapenos, and onions.
+              </p>
+              <p class="item-price">₹155</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Cheese Burst</h3>
+              <p class="item-description">
+                Crust filled with molten cheese and generous toppings.
+              </p>
+              <p class="item-price">₹235</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Golden Pizza</h3>
+              <p class="item-description">
+                Cheesy pizza loaded with sweet corn.
+              </p>
+              <p class="item-price">₹145</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Green House</h3>
+              <p class="item-description">
+                A veggie mix of onions, capsicum, mushrooms & tomatoes.
+              </p>
+              <p class="item-price">₹155</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Indian Hot</h3>
+              <p class="item-description">
+                Spicy mozzarella pizza with olives and jalapenos.
+              </p>
+              <p class="item-price">₹155</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Adi's Special</h3>
+              <p class="item-description">
+                Signature pizza with olives, baby corn, and mixed veggies.
+              </p>
+              <p class="item-price">₹195</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Peprika</h3>
+              <p class="item-description">
+                Marinated paneer with peppers and capsicum.
+              </p>
+              <p class="item-price">₹165</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Schezwan Paneer</h3>
+              <p class="item-description">
+                Indo-Chinese pizza with spicy Schezwan paneer.
+              </p>
+              <p class="item-price">₹165</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Tandoori Paneer</h3>
+              <p class="item-description">
+                Desi twist with smoky tandoori paneer.
+              </p>
+              <p class="item-price">₹165</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sandwiches Section -->
+      <div class="menu-section" id="sandwiches">
+        <h2 class="section-title">🥪 Sandwiches</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Tikka</h3>
+              <p class="item-description">
+                Veggies grilled in tikka masala, layered with sauces.
+              </p>
+              <p class="item-price">₹95</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Cheese Pocket</h3>
+              <p class="item-description">
+                Stuffed with cheese and green chutney for a flavorful bite.
+              </p>
+              <p class="item-price">₹90</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Club Sandwich</h3>
+              <p class="item-description">
+                Classic 4-layered sandwich with cheese and mayo.
+              </p>
+              <p class="item-price">₹125</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Mexican Sandwich</h3>
+              <p class="item-description">
+                Tangy veg filling with aloo tikki for a spicy punch.
+              </p>
+              <p class="item-price">₹100</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Spinach & Corn</h3>
+              <p class="item-description">
+                Healthy and cheesy mix of spinach and sweet corn.
+              </p>
+              <p class="item-price">₹105</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Thai Paneer</h3>
+              <p class="item-description">
+                Exotic Thai-flavored paneer with cheese.
+              </p>
+              <p class="item-price">₹105</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Tikka</h3>
+              <p class="item-description">
+                Spicy paneer with onion-cashew blend and cheese.
+              </p>
+              <p class="item-price">₹110</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Crunchy Paneer</h3>
+              <p class="item-description">
+                Crunchy and cheesy paneer sandwich with garlic flavor.
+              </p>
+              <p class="item-price">₹110</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Jawali Sandwich</h3>
+              <p class="item-description">
+                Triple-layer sandwich with creamy mayo.
+              </p>
+              <p class="item-price">₹85</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Aloo Tikki</h3>
+              <p class="item-description">
+                North Indian favorite with mayo and crunchy tikki.
+              </p>
+              <p class="item-price">₹75</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Mayonnaise</h3>
+              <p class="item-description">
+                Simple yet tasty, with a rich mayo spread.
+              </p>
+              <p class="item-price">₹60</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section" id="pasta">
+        <h2 class="section-title">🍝 Pasta</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">White Sauce Pasta</h3>
+              <p class="item-description">
+                Creamy and rich, loaded with vegetables.
+              </p>
+              <p class="item-price">₹170</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Red Sauce Pasta</h3>
+              <p class="item-description">
+                Tangy tomato base with spices and herbs.
+              </p>
+              <p class="item-price">₹175</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Pink Sauce Pasta</h3>
+              <p class="item-description">
+                Perfect mix of red and white sauces.
+              </p>
+              <p class="item-price">₹205</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Schezwan Pasta</h3>
+              <p class="item-description">
+                Spicy Indo-Chinese pasta with zingy Schezwan flavor.
+              </p>
+              <p class="item-price">₹210</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Nachos Pasta</h3>
+              <p class="item-description">
+                Crunchy nachos topped with cheesy pasta.
+              </p>
+              <p class="item-price">₹215</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Cheese Filled Pasta</h3>
+              <p class="item-description">
+                Extra cheesy, stuffed pasta goodness.
+              </p>
+              <p class="item-price">₹215</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Adi Mix Pasta</h3>
+              <p class="item-description">
+                House special spicy-creamy pasta combo.
+              </p>
+              <p class="item-price">₹215</p>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Toasts Section (separated from Pasta) -->
-<div class="menu-section" id="toasts">
-  <h2 class="section-title">🍞 Toasts</h2>
-  <div class="menu-items">
-      <div class="menu-item">
-          <div class="item-content">
+      <div class="menu-section" id="toasts">
+        <h2 class="section-title">🍞 Toasts</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
               <h3 class="item-name">Chilly Cheese Toast</h3>
-              <p class="item-description">Toasted bread with spicy veggies and melted cheese.</p>
+              <p class="item-description">
+                Toasted bread with spicy veggies and melted cheese.
+              </p>
               <p class="item-price">₹115</p>
+            </div>
           </div>
-      </div>
-      <div class="menu-item">
-          <div class="item-content">
+          <div class="menu-item">
+            <div class="item-content">
               <h3 class="item-name">Mexican Chilly Toast</h3>
-              <p class="item-description">Veggies, olives, and sauces over cheese toast.</p>
+              <p class="item-description">
+                Veggies, olives, and sauces over cheese toast.
+              </p>
               <p class="item-price">₹120</p>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
-</div>
 
-
-        <!-- Fries & Burgers Section -->
-        <div class="menu-section" id="fries">
-          <h2 class="section-title">🍟 Fries</h2>
-          <div class="menu-items">
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">French Fries</h3>
-                      <p class="item-description">Classic golden crispy fries.</p>
-                      <p class="item-price">₹85</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Peri-Peri Fries</h3>
-                      <p class="item-description">Tossed with spicy peri-peri masala.</p>
-                      <p class="item-price">₹95</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Veggie Masala Fries</h3>
-                      <p class="item-description">Loaded fries with vegetables and tangy lime.</p>
-                      <p class="item-price">₹125</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Aloo Tikki Fries</h3>
-                      <p class="item-description">Topped with spicy tikki and cheese.</p>
-                      <p class="item-price">₹135</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Cheese Fries</h3>
-                      <p class="item-description">Fries with gooey cheese sauce.</p>
-                      <p class="item-price">₹115</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Masala Cheese Fries</h3>
-                      <p class="item-description">Spiced fries with cheese topping.</p>
-                      <p class="item-price">₹130</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Mayo Fries</h3>
-                      <p class="item-description">Creamy mayo adds richness to fries.</p>
-                      <p class="item-price">₹105</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Chilly Garlic Fries</h3>
-                      <p class="item-description">Infused with garlic and red chili flavor.</p>
-                      <p class="item-price">₹95</p>
-                  </div>
-              </div>
+      <!-- Fries & Burgers Section -->
+      <div class="menu-section" id="fries">
+        <h2 class="section-title">🍟 Fries</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">French Fries</h3>
+              <p class="item-description">Classic golden crispy fries.</p>
+              <p class="item-price">₹85</p>
+            </div>
           </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Peri-Peri Fries</h3>
+              <p class="item-description">
+                Tossed with spicy peri-peri masala.
+              </p>
+              <p class="item-price">₹95</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veggie Masala Fries</h3>
+              <p class="item-description">
+                Loaded fries with vegetables and tangy lime.
+              </p>
+              <p class="item-price">₹125</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Aloo Tikki Fries</h3>
+              <p class="item-description">
+                Topped with spicy tikki and cheese.
+              </p>
+              <p class="item-price">₹135</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Cheese Fries</h3>
+              <p class="item-description">Fries with gooey cheese sauce.</p>
+              <p class="item-price">₹115</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Masala Cheese Fries</h3>
+              <p class="item-description">Spiced fries with cheese topping.</p>
+              <p class="item-price">₹130</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Mayo Fries</h3>
+              <p class="item-description">
+                Creamy mayo adds richness to fries.
+              </p>
+              <p class="item-price">₹105</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Chilly Garlic Fries</h3>
+              <p class="item-description">
+                Infused with garlic and red chili flavor.
+              </p>
+              <p class="item-price">₹95</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="menu-section" id="burgers">
         <h2 class="section-title">🍔 Burgers</h2>
         <div class="menu-items">
-            <div class="menu-item">
-                <div class="item-content">
-                    <h3 class="item-name">Pure Veg Burger</h3>
-                    <p class="item-description">Crispy patty with veggies and sauces.</p>
-                    <p class="item-price">₹65</p>
-                </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Pure Veg Burger</h3>
+              <p class="item-description">
+                Crispy patty with veggies and sauces.
+              </p>
+              <p class="item-price">₹65</p>
             </div>
-            <div class="menu-item">
-                <div class="item-content">
-                    <h3 class="item-name">Cheese Slice Burger</h3>
-                    <p class="item-description">Classic veg burger with cheese.</p>
-                    <p class="item-price">₹85</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="item-content">
-                    <h3 class="item-name">Spicy Burger</h3>
-                    <p class="item-description">Hot sauces layered for a fiery taste.</p>
-                    <p class="item-price">₹85</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="item-content">
-                    <h3 class="item-name">Spicy Cheese Burger</h3>
-                    <p class="item-description">Spicy patty with a cheesy twist.</p>
-                    <p class="item-price">₹90</p>
-                </div>
-            </div>
-        </div>
-    </div>
-        <!-- Wraps & Breads Section -->
-        <div class="menu-section" id="wraps">
-          <h2 class="section-title">🌯 Wraps</h2>
-          <div class="menu-items">
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Paneer Wrap</h3>
-                      <p class="item-description">Grilled paneer with fresh veggies.</p>
-                      <p class="item-price">₹85</p>
-                  </div>
-              </div>
-              <div class="menu-item">
-                  <div class="item-content">
-                      <h3 class="item-name">Aloo Tikki Wrap</h3>
-                      <p class="item-description">Spicy tikki with sauces in a wrap.</p>
-                      <p class="item-price">₹95</p>
-                  </div>
-              </div>
           </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Cheese Slice Burger</h3>
+              <p class="item-description">Classic veg burger with cheese.</p>
+              <p class="item-price">₹85</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Spicy Burger</h3>
+              <p class="item-description">
+                Hot sauces layered for a fiery taste.
+              </p>
+              <p class="item-price">₹85</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Spicy Cheese Burger</h3>
+              <p class="item-description">Spicy patty with a cheesy twist.</p>
+              <p class="item-price">₹90</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Wraps & Breads Section -->
+      <div class="menu-section" id="wraps">
+        <h2 class="section-title">🌯 Wraps</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Wrap</h3>
+              <p class="item-description">Grilled paneer with fresh veggies.</p>
+              <p class="item-price">₹85</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Aloo Tikki Wrap</h3>
+              <p class="item-description">Spicy tikki with sauces in a wrap.</p>
+              <p class="item-price">₹95</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="menu-section" id="breads">
         <h2 class="section-title">🥖 Breads</h2>
         <div class="menu-items">
-            <div class="menu-item">
-                <div class="item-content">
-                    <h3 class="item-name">Garlic Bread</h3>
-                    <p class="item-description">Crispy bread with garlic and cheese.</p>
-                    <p class="item-price">₹115</p>
-                </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Garlic Bread</h3>
+              <p class="item-description">
+                Crispy bread with garlic and cheese.
+              </p>
+              <p class="item-price">₹115</p>
             </div>
-            <div class="menu-item">
-                <div class="item-content">
-                    <h3 class="item-name">Tandoori Garlic Bread</h3>
-                    <p class="item-description">Tandoori-flavored cheesy garlic bread.</p>
-                    <p class="item-price">₹125</p>
-                </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Tandoori Garlic Bread</h3>
+              <p class="item-description">
+                Tandoori-flavored cheesy garlic bread.
+              </p>
+              <p class="item-price">₹125</p>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="menu-section" id="coolers">
-      <h2 class="section-title">🥤 Coolers</h2>
-      <div class="menu-items">
-          <div class="menu-item">
-              <div class="item-content">
-                  <h3 class="item-name">Lemon Mojito</h3>
-                  <p class="item-description">Refreshing lemon-mint fizz.</p>
-                  <p class="item-price">₹110</p>
-              </div>
-          </div>
-          <div class="menu-item">
-              <div class="item-content">
-                  <h3 class="item-name">Green Apple</h3>
-                  <p class="item-description">Sweet and tangy green apple cooler.</p>
-                  <p class="item-price">₹110</p>
-              </div>
-          </div>
-          <div class="menu-item">
-              <div class="item-content">
-                  <h3 class="item-name">Watermelon</h3>
-                  <p class="item-description">Fresh watermelon cooler.</p>
-                  <p class="item-price">₹110</p>
-              </div>
-          </div>
-          <div class="menu-item">
-              <div class="item-content">
-                  <h3 class="item-name">Cool Blue</h3>
-                  <p class="item-description">Electric blue soda-based drink.</p>
-                  <p class="item-price">₹100</p>
-              </div>
-          </div>
       </div>
-  </div>
-  <div class="menu-section" id="coffees">
-    <h2 class="section-title">☕ Coffees</h2>
-    <div class="menu-items">
-        <div class="menu-item">
+      <div class="menu-section" id="coolers">
+        <h2 class="section-title">🥤 Coolers</h2>
+        <div class="menu-items">
+          <div class="menu-item">
             <div class="item-content">
-                <h3 class="item-name">Regular Cold Coffee</h3>
-                <p class="item-description">Classic cold coffee with ice cream.</p>
-                <p class="item-price">₹95</p>
+              <h3 class="item-name">Lemon Mojito</h3>
+              <p class="item-description">Refreshing lemon-mint fizz.</p>
+              <p class="item-price">₹110</p>
             </div>
-        </div>
-        <div class="menu-item">
+          </div>
+          <div class="menu-item">
             <div class="item-content">
-                <h3 class="item-name">Chocolate Cold Coffee</h3>
-                <p class="item-description">Rich chocolate-flavored cold coffee.</p>
-                <p class="item-price">₹115</p>
+              <h3 class="item-name">Green Apple</h3>
+              <p class="item-description">
+                Sweet and tangy green apple cooler.
+              </p>
+              <p class="item-price">₹110</p>
             </div>
-        </div>
-        <div class="menu-item">
+          </div>
+          <div class="menu-item">
             <div class="item-content">
-                <h3 class="item-name">Hazelnut Cold Coffee</h3>
-                <p class="item-description">Premium cold coffee with hazelnut flavor.</p>
-                <p class="item-price">₹125</p>
+              <h3 class="item-name">Watermelon</h3>
+              <p class="item-description">Fresh watermelon cooler.</p>
+              <p class="item-price">₹110</p>
             </div>
-        </div>
-        <div class="menu-item">
+          </div>
+          <div class="menu-item">
             <div class="item-content">
-                <h3 class="item-name">Hot Cappuccino</h3>
-                <p class="item-description">Classic coffee with frothy milk.</p>
-                <p class="item-price">₹90</p>
+              <h3 class="item-name">Cool Blue</h3>
+              <p class="item-description">Electric blue soda-based drink.</p>
+              <p class="item-price">₹100</p>
             </div>
+          </div>
         </div>
-        <div class="menu-item">
+      </div>
+      <div class="menu-section" id="coffees">
+        <h2 class="section-title">☕ Coffees</h2>
+        <div class="menu-items">
+          <div class="menu-item">
             <div class="item-content">
-                <h3 class="item-name">Hot Chocolate</h3>
-                <p class="item-description">Warm chocolate beverage with cream.</p>
-                <p class="item-price">₹110</p>
+              <h3 class="item-name">Regular Cold Coffee</h3>
+              <p class="item-description">
+                Classic cold coffee with ice cream.
+              </p>
+              <p class="item-price">₹95</p>
             </div>
-        </div>
-    </div>
-</div>
-    
-        <!-- Maggi Specials Section -->
-        <div class="menu-section" id="maggi">
-            <h2 class="section-title">🍜 Maggi Specials</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Butter Vegetable Maggi</h3>
-                        <p class="item-description">Buttery Maggi with fresh vegetables.</p>
-                        <p class="item-price">₹85</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Peri-Peri Maggi</h3>
-                        <p class="item-description">Spicy twist with peri-peri mix.</p>
-                        <p class="item-price">₹95</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Mayonnaise Maggi</h3>
-                        <p class="item-description">Creamy mayo stirred in Maggi.</p>
-                        <p class="item-price">₹80</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Cheese Maggi</h3>
-                        <p class="item-description">Cheesy version for Maggi lovers.</p>
-                        <p class="item-price">₹95</p>
-                    </div>
-                </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Chocolate Cold Coffee</h3>
+              <p class="item-description">
+                Rich chocolate-flavored cold coffee.
+              </p>
+              <p class="item-price">₹115</p>
             </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Hazelnut Cold Coffee</h3>
+              <p class="item-description">
+                Premium cold coffee with hazelnut flavor.
+              </p>
+              <p class="item-price">₹125</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Hot Cappuccino</h3>
+              <p class="item-description">Classic coffee with frothy milk.</p>
+              <p class="item-price">₹90</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Hot Chocolate</h3>
+              <p class="item-description">
+                Warm chocolate beverage with cream.
+              </p>
+              <p class="item-price">₹110</p>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Nachos Specials Section -->
-        <div class="menu-section" id="nachos">
-            <h2 class="section-title">🔥 Nachos Specials</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Peri-Peri Nachos</h3>
-                        <p class="item-description">Nachos topped with spicy seasoning and cheese.</p>
-                        <p class="item-price">₹95</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Cheese & Herb Nachos</h3>
-                        <p class="item-description">Topped with ketchup and herbs.</p>
-                        <p class="item-price">₹95</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Tikka Masala Nachos</h3>
-                        <p class="item-description">Indian-style tikka masala topping with cheese.</p>
-                        <p class="item-price">₹95</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">Mexican Nachos</h3>
-                        <p class="item-description">With olives, cheese, and zesty sauces.</p>
-                        <p class="item-price">₹105</p>
-                    </div>
-                </div>
+      <!-- Maggi Specials Section -->
+      <div class="menu-section" id="maggi">
+        <h2 class="section-title">🍜 Maggi Specials</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Butter Vegetable Maggi</h3>
+              <p class="item-description">
+                Buttery Maggi with fresh vegetables.
+              </p>
+              <p class="item-price">₹85</p>
             </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Peri-Peri Maggi</h3>
+              <p class="item-description">Spicy twist with peri-peri mix.</p>
+              <p class="item-price">₹95</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Mayonnaise Maggi</h3>
+              <p class="item-description">Creamy mayo stirred in Maggi.</p>
+              <p class="item-price">₹80</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Cheese Maggi</h3>
+              <p class="item-description">Cheesy version for Maggi lovers.</p>
+              <p class="item-price">₹95</p>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Coolers & Coffees Section -->
-        
-    
-          <!-- Shakes Section (separated from Desserts) -->
-<div class="menu-section" id="shakes">
-  <h2 class="section-title">🥛 Shakes</h2>
-  <div class="menu-items">
-      <div class="menu-item">
-          <div class="item-content">
+      <!-- Nachos Specials Section -->
+      <div class="menu-section" id="nachos">
+        <h2 class="section-title">🔥 Nachos Specials</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Peri-Peri Nachos</h3>
+              <p class="item-description">
+                Nachos topped with spicy seasoning and cheese.
+              </p>
+              <p class="item-price">₹95</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Cheese & Herb Nachos</h3>
+              <p class="item-description">Topped with ketchup and herbs.</p>
+              <p class="item-price">₹95</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Tikka Masala Nachos</h3>
+              <p class="item-description">
+                Indian-style tikka masala topping with cheese.
+              </p>
+              <p class="item-price">₹95</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Mexican Nachos</h3>
+              <p class="item-description">
+                With olives, cheese, and zesty sauces.
+              </p>
+              <p class="item-price">₹105</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coolers & Coffees Section -->
+
+      <!-- Shakes Section (separated from Desserts) -->
+      <div class="menu-section" id="shakes">
+        <h2 class="section-title">🥛 Shakes</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
               <h3 class="item-name">Chocolate Shake</h3>
               <p class="item-description">Rich and creamy chocolate shake.</p>
               <p class="item-price">₹135</p>
+            </div>
           </div>
-      </div>
-      <div class="menu-item">
-          <div class="item-content">
+          <div class="menu-item">
+            <div class="item-content">
               <h3 class="item-name">Strawberry Shake</h3>
-              <p class="item-description">Sweet strawberry shake with ice cream.</p>
+              <p class="item-description">
+                Sweet strawberry shake with ice cream.
+              </p>
               <p class="item-price">₹135</p>
+            </div>
           </div>
-      </div>
-      <div class="menu-item">
-          <div class="item-content">
+          <div class="menu-item">
+            <div class="item-content">
               <h3 class="item-name">Vanilla Shake</h3>
               <p class="item-description">Classic vanilla milkshake.</p>
               <p class="item-price">₹125</p>
+            </div>
           </div>
-      </div>
-      <div class="menu-item">
-          <div class="item-content">
+          <div class="menu-item">
+            <div class="item-content">
               <h3 class="item-name">Oreo Shake</h3>
               <p class="item-description">Cookies and cream milkshake.</p>
               <p class="item-price">₹145</p>
+            </div>
           </div>
-      </div>
-      <div class="menu-item">
-          <div class="item-content">
+          <div class="menu-item">
+            <div class="item-content">
               <h3 class="item-name">Brownie Shake</h3>
-              <p class="item-description">Chocolate shake with brownie pieces.</p>
+              <p class="item-description">
+                Chocolate shake with brownie pieces.
+              </p>
               <p class="item-price">₹165</p>
+            </div>
           </div>
-      </div>
-  </div>
-</div>
-<div class="menu-section" id="desserts">
-  <h2 class="section-title">🍰 Desserts</h2>
-  <div class="menu-items">
-      <div class="menu-item">
-          <div class="item-content">
-              <h3 class="item-name">Chocolate Brownie</h3>
-              <p class="item-description">Warm chocolate brownie with ice cream.</p>
-              <p class="item-price">₹145</p>
-          </div>
-      </div>
-      <div class="menu-item">
-          <div class="item-content">
-              <h3 class="item-name">Ice Cream Sundae</h3>
-              <p class="item-description">Classic sundae with choice of toppings.</p>
-              <p class="item-price">₹125</p>
-          </div>
-      </div>
-  </div>
-</div>
         </div>
-    
-        <footer>
-            <p>&copy; 2025 Adi's Cafe. All rights reserved.</p>
-            <p>Contact: +91 98765 43210 | Email: info@adiscafe.com</p>
-        </footer>
-    
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const menuButtons = document.querySelectorAll('.menu-btn');
-                const menuSections = document.querySelectorAll('.menu-section');
-                
-                menuButtons.forEach(button => {
-                    button.addEventListener('click', function() {
-                        const category = this.getAttribute('data-category');
-                        
-                        // Remove active class from all buttons
-                        menuButtons.forEach(btn => btn.classList.remove('active'));
-                        
-                        // Add active class to clicked button
-                        this.classList.add('active');
-                        
-                        // Hide all sections
-                        menuSections.forEach(section => section.classList.remove('active'));
-                        
-                        // Show selected section
-                        document.getElementById(category).classList.add('active');
-                    });
-                });
-            });
-        </script>
-    </body>
-    </html>
+      </div>
+      <div class="menu-section" id="desserts">
+        <h2 class="section-title">🍰 Desserts</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Chocolate Brownie</h3>
+              <p class="item-description">
+                Warm chocolate brownie with ice cream.
+              </p>
+              <p class="item-price">₹145</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Ice Cream Sundae</h3>
+              <p class="item-description">
+                Classic sundae with choice of toppings.
+              </p>
+              <p class="item-price">₹125</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Adi's Cafe. All rights reserved.</p>
+      <p>Contact: +91 98765 43210 | Email: info@adiscafe.com</p>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuButtons = document.querySelectorAll('.menu-btn');
+        const menuSections = document.querySelectorAll('.menu-section');
+
+        menuButtons.forEach((button) => {
+          button.addEventListener('click', function () {
+            const category = this.getAttribute('data-category');
+
+            // Remove active class from all buttons
+            menuButtons.forEach((btn) => btn.classList.remove('active'));
+
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            // Hide all sections
+            menuSections.forEach((section) =>
+              section.classList.remove('active')
+            );
+
+            // Show selected section
+            document.getElementById(category).classList.add('active');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,64 +1,1102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adi's Hotel Menu</title>
+    <link rel="stylesheet" href="/Web-Tech/menu/hotel/hotel.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="cafe-name">Adi's Hotel</h1>
+      <p class="cafe-tagline">Delicious Food, Great Ambiance</p>
+    </header>
+    <div class="container">
+      <div class="menu-navigation">
+        <button class="menu-btn active" data-category="soups">Soups</button>
+        <button class="menu-btn" data-category="chinese-snacks">
+          Chinese Snacks
+        </button>
+        <button class="menu-btn" data-category="chinese-starter">
+          Chinese Starter
+        </button>
+        <button class="menu-btn" data-category="noodles">Noodles</button>
+        <button class="menu-btn" data-category="indian-veg-snacks">
+          Indian Veg Snacks
+        </button>
+        <button class="menu-btn" data-category="tandoori-snacks">
+          Tandoori Snacks
+        </button>
+        <button class="menu-btn" data-category="sabji-ka-khajana">
+          Sabji Ka Khajana
+        </button>
+        <button class="menu-btn" data-category="chef-special">
+          Chef Special
+        </button>
+        <button class="menu-btn" data-category="fresh-paneer">
+          Fresh Paneer
+        </button>
+        <button class="menu-btn" data-category="sweet-dishes">
+          Sweet Dishes
+        </button>
+        <button class="menu-btn" data-category="dal">Dal</button>
+        <button class="menu-btn" data-category="tandoori-roti">
+          Tandoori Roti
+        </button>
+        <button class="menu-btn" data-category="rice">Rice</button>
+      </div>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>HOTEL ADI MENU</title>
-</head>
+      <div class="menu-section active" id="soups">
+        <h2 class="section-title">🥣 Soups</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Cream of Tomato Soup</h3>
+              <p class="item-price">₹120</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Tomato Soup</h3>
+              <p class="item-price">₹110</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Adi Special Soup</h3>
+              <p class="item-price">₹120</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Sweetcorn Mushroom Soup</h3>
+              <p class="item-price">₹110</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Manchow Soup</h3>
+              <p class="item-price">₹110</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Hot & Sour Soup</h3>
+              <p class="item-price">₹110</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Noodle Soup</h3>
+              <p class="item-price">₹110</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Sweetcorn Soup</h3>
+              <p class="item-price">₹110</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Clear Soup</h3>
+              <p class="item-price">₹110</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Cream of Veg Soup</h3>
+              <p class="item-price">₹120</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Cream of Mushroom Soup</h3>
+              <p class="item-price">₹120</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Cream of Palak Soup</h3>
+              <p class="item-price">₹120</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<body>
-  <div class="flipbook">
-    <div class="hard">HOTEL ADI MENU
-  <div class="cover-container">
-    <img src="1.jpg" alt="Cover Image" />
-  </div>
-  <small></small>
-</div>
+      <div class="menu-section" id="chinese-snacks">
+        <h2 class="section-title">🍜 Chinese Snacks</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Babycorn Munchurian</h3>
+              <p class="item-price">₹130</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Munchurian</h3>
+              <p class="item-price">₹130</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Gobi Munchurian</h3>
+              <p class="item-price">₹120</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Munchurian</h3>
+              <p class="item-price">₹160</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Mushroom Munchurian</h3>
+              <p class="item-price">₹160</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Chilli</h3>
+              <p class="item-price">₹130</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Chilli</h3>
+              <p class="item-price">₹170</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Lolypop</h3>
+              <p class="item-price">₹210</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg 65</h3>
+              <p class="item-price">₹120</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Hot Pan</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Mushroom Chilli</h3>
+              <p class="item-price">₹160</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Crispy</h3>
+              <p class="item-price">₹180</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <div class="hard"></div>
-    <div>
-      <img src="2.jpg" alt="" />
-      <small> 1 </small>
-    </div>
-    <div>
-      <img src="3.jpg" alt="" />
-      <small> 2 </small>
-    </div>
-    <div>
-      <img src="4.jpg" alt="" />
-      <small> 3 </small>
-    </div>
-    <div>
-      <img src="5.jpg" alt="" />
-      <small> 4 </small>
-    </div>
-    <div>
-      <img src="6.jpg" alt="" />
-      <small> 5 </small>
-    </div>
-    <div>
-      <img src="7.jpg" alt="" />
-      <small> 6 </small>
-    </div>
-    <div>
-      <img src="8.jpg" alt="" />
-      <small> 7 </small>
-    </div>
-    <div>
-      <img src="9.jpg" alt="" />
-      <small> 8 </small>
-    </div>
-    <div class="hard"></div>
-    <div class="hard">Thank You</div>
-  </div>
-  <div></div>
-  <script src="jquery.js"></script>
-  <script src="turn.js"></script>
-  <script>
-    $(".flipbook").turn();
-  </script>
-</body>
+      <div class="menu-section" id="chinese-starter">
+        <h2 class="section-title">🥢 Chinese Starter</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Sizzler</h3>
+              <p class="item-price">₹245</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Sizzler</h3>
+              <p class="item-price">₹270</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Tandoori Paneer Sizzler</h3>
+              <p class="item-price">₹290</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Sathe</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Chilli Bins Paneer</h3>
+              <p class="item-price">₹255</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Spicy Mushroom</h3>
+              <p class="item-price">₹190</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Spicy Paneer</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Moroccan Paneer</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer in Shezwan Souce</h3>
+              <p class="item-price">₹240</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Hotpan</h3>
+              <p class="item-price">₹240</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer 65</h3>
+              <p class="item-price">₹190</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Gobi 65</h3>
+              <p class="item-price">₹170</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Popscicles</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="menu-section" id="noodles">
+        <h2 class="section-title">🍜 Noodles</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Noodles Fried Rice</h3>
+              <p class="item-price">₹240</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Hongkong Noodles</h3>
+              <p class="item-price">₹240</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Singapuri Noodles</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section" id="indian-veg-snacks">
+        <h2 class="section-title">🇮🇳 Indian Veg Snacks</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Pakoda</h3>
+              <p class="item-price">₹90</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Pakoda</h3>
+              <p class="item-price">₹140</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Finger Chips</h3>
+              <p class="item-price">₹90</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Masala Papad</h3>
+              <p class="item-price">₹50</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Fry Papad</h3>
+              <p class="item-price">₹20</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Roasted Papad</h3>
+              <p class="item-price">₹20</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section" id="tandoori-snacks">
+        <h2 class="section-title">🔥 Tandoori Snacks</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Hara Bhara Kabab</h3>
+              <p class="item-price">₹190</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Seekh Kabab</h3>
+              <p class="item-price">₹240</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Tikka Kabab</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Mushroom Tikka</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Gobi Tikka</h3>
+              <p class="item-price">₹180</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Angara Kabab</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Banjara Kabab</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Hariyali Kabab</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Achari Kabab</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section" id="sabji-ka-khajana">
+        <h2 class="section-title">🍲 Sabji Ka Khajana</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Adi Special</h3>
+              <p class="item-price">₹255</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Kolhapuri</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Jaypuri</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Mix Veg</h3>
+              <p class="item-price">₹200</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Kaju Kari</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Vej Bunah</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Green Peas Masala</h3>
+              <p class="item-price">₹200</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Peas Palak</h3>
+              <p class="item-price">₹160</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Plain Palak</h3>
+              <p class="item-price">₹180</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Dam Aloo Panjabi</h3>
+              <p class="item-price">₹190</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Hydrabadi Veg</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Malvani</h3>
+              <p class="item-price">₹320</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Malvani Rassa</h3>
+              <p class="item-price">₹110</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Kofta</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Makkhanwala</h3>
+              <p class="item-price">₹210</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Palak Paneer</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Tawa Veg</h3>
+              <p class="item-price">₹210</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Kaju Masala</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Masala Kofta</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Patiyala</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Mushroom Handi</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Diwani Handi</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Handi</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Kadhai</h3>
+              <p class="item-price">₹210</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Chillimili</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Maratha</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Matka</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Sham Sawera</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section" id="chef-special-veg">
+        <h2 class="section-title">👨‍🍳 Chef Special (Veg)</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Basket</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Chatpata</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Banjara</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Dilrooba</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Angara</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Tiranga</h3>
+              <p class="item-price">₹300</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Lababdar</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section" id="fresh-paneer">
+        <h2 class="section-title">🧀 Fresh Paneer</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Tikka Masala</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Burji</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Makhani</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Kaju Paneer Handi</h3>
+              <p class="item-price">₹240</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Chingari</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Handi</h3>
+              <p class="item-price">₹240</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Kadhai</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Kaju Paneer Masala</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Tufani</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Matka</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Tawa</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section" id="chef-special-paneer">
+        <h2 class="section-title">👨‍🍳 Chef Special (Paneer)</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Basket</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Moglai</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Matar</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Rajwada</h3>
+              <p class="item-price">₹250</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Kolhapuri</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Patiyala</h3>
+              <p class="item-price">₹215</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Laziz</h3>
+              <p class="item-price">₹215</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Lababdar</h3>
+              <p class="item-price">₹240</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Dilbahar</h3>
+              <p class="item-price">₹215</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Angara</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Banjara</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section" id="sweet-dishes">
+        <h2 class="section-title">মিষ্টি পদ (Sweet Dishes)</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Pasanda</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Shahi Kurma</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Malai Kofta</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Mumtaj</h3>
+              <p class="item-price">₹250</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Kaju Kurma</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Navratna Kurma</h3>
+              <p class="item-price">₹230</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section" id="dal">
+        <h2 class="section-title">🥣 Dal</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Dal Fry</h3>
+              <p class="item-price">₹120</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Dal Kolhapuri</h3>
+              <p class="item-price">₹130</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Butter Dal Fry</h3>
+              <p class="item-price">₹140</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Dal Jeera</h3>
+              <p class="item-price">₹130</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Dal Lasooni</h3>
+              <p class="item-price">₹130</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Dal Tadka</h3>
+              <p class="item-price">₹150</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Dal Tadlka Lasooni</h3>
+              <p class="item-price">₹170</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Dal Tadka Jeera</h3>
+              <p class="item-price">₹170</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section" id="tandoori-roti">
+        <h2 class="section-title">🍞 Tandoori Roti</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paratha</h3>
+              <p class="item-price">₹50</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Butter Paratha</h3>
+              <p class="item-price">₹60</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Aloo Paratha</h3>
+              <p class="item-price">₹100</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Paneer Paratha</h3>
+              <p class="item-price">₹120</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Stuff Paratha</h3>
+              <p class="item-price">₹100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section" id="roti">
+        <h2 class="section-title">🥖 Roti</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Roti</h3>
+              <p class="item-price">₹20</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Butter Roti</h3>
+              <p class="item-price">₹25</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Nan</h3>
+              <p class="item-price">₹50</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Butter Nan</h3>
+              <p class="item-price">₹60</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Wheat Roti</h3>
+              <p class="item-price">₹25</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Wheat Butter Roti</h3>
+              <p class="item-price">₹30</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Garlic Nan</h3>
+              <p class="item-price">₹60</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Butter Garlic Nan</h3>
+              <p class="item-price">₹70</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Kulcha</h3>
+              <p class="item-price">₹35</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Butter Kulcha</h3>
+              <p class="item-price">₹40</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Masala Kulcha</h3>
+              <p class="item-price">₹50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section" id="rice">
+        <h2 class="section-title">🍚 Rice</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Plain Rice (F/H)</h3>
+              <p class="item-price">₹100 / ₹60</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Jeera Rice (F/H)</h3>
+              <p class="item-price">₹130 / ₹70</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Ghee Rice</h3>
+              <p class="item-price">₹170</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Kadhi Rice</h3>
+              <p class="item-price">₹140</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Kashmiri Pulav</h3>
+              <p class="item-price">₹180</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Pulav</h3>
+              <p class="item-price">₹170</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Biryani</h3>
+              <p class="item-price">₹205</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Veg Dam Biryani</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Peas Pulav</h3>
+              <p class="item-price">₹140</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Adi Special Pulav</h3>
+              <p class="item-price">₹190</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Masala Rice</h3>
+              <p class="item-price">₹170</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Mushroom Biryani</h3>
+              <p class="item-price">₹220</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-content">
+              <h3 class="item-name">Ghee Jeera Rice</h3>
+              <p class="item-price">₹155</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Adi's Cafe. All rights reserved.</p>
+      <p>Contact: +91 98765 43210 | Email: info@adiscafe.com</p>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuButtons = document.querySelectorAll('.menu-btn');
+        const menuSections = document.querySelectorAll('.menu-section');
+
+        menuButtons.forEach((button) => {
+          button.addEventListener('click', function () {
+            const category = this.getAttribute('data-category');
+
+            // Remove active class from all buttons
+            menuButtons.forEach((btn) => btn.classList.remove('active'));
+
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            // Hide all sections
+            menuSections.forEach((section) =>
+              section.classList.remove('active')
+            );
+
+            // Show selected section
+            document.getElementById(category).classList.add('active');
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
