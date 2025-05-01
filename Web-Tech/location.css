@@ -1,0 +1,166 @@
+/* General Page Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(3px);
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #222;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+nav a:hover {
+  background-color: #ffcc70;
+  color: black;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+.hero h1 {
+  font-size: 40px;
+  color: #ffcc70;
+  margin: 0;
+}
+
+/* Branches Grid Container */
+.branches-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* Branch Card */
+.branch-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease;
+}
+.branch-card:hover {
+  transform: translateY(-6px);
+}
+
+.branch-details {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.branch-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.hotel-icon::before {
+  content: "🏨";
+}
+.cafe-icon::before {
+  content: "☕";
+}
+
+.branch-card h3 {
+  margin: 10px 0;
+  color: #ffcc70;
+}
+.cafe h3 {
+  color: #70a0ff;
+}
+
+.branch-address,
+.branch-contact,
+.branch-hours {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.branch-hours {
+  font-weight: bold;
+}
+
+/* Google Map */
+.branch-map iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.branch-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.branch-buttons a {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.btn-directions {
+  background: transparent;
+  border: 1px solid #fff;
+  color: white;
+}
+.btn-reserve {
+  background: #ffcc70;
+  color: black;
+}
+.btn-order {
+  background: #70a0ff;
+  color: black;
+}
+.branch-buttons a:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #222;
+  padding: 20px;
+  color: #ddd;
+  font-size: 14px;
+}
+footer .contact-info p {
+  margin: 5px 0;
+}
+/* Prevent emojis from showing in italic */
+i.hotel-icon,
+i.cafe-icon {
+  font-style: normal;
+}

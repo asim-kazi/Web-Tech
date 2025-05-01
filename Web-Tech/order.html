@@ -1,12 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Order</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Online Orders is coming Soon..</h1>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order | Hotel Adi & Adi's Cafe</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .order-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin: 30px auto;
+      max-width: 1200px;
+      padding: 20px;
+    }
+
+    .order-card {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      border-radius: 15px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .order-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .order-card h3 {
+      font-size: 22px;
+      color: #ffcc70;
+      margin-bottom: 10px;
+    }
+
+    .order-card p {
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .order-btn {
+      display: inline-block;
+      background-color: #ffcc70;
+      color: black;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .order-btn:hover {
+      background-color: #ffd67f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="title.html">HOME</a>
+      <a href="menu.html">MENU</a>
+      <a href="story.html">OUR STORY</a>
+      <a href="location.html">LOCATIONS</a>
+      <a href="order.html">ORDER</a>
+      <a href="/table_rs/index.html">FIND A TABLE</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Online Orders</h1>
+  </section>
+
+  <div class="order-container">
+    <!-- Jaisingpur -->
+    <div class="order-card">
+      <h3>Hotel Adi - Jaisingpur</h3>
+      <p>Order from our Jaisingpur hotel kitchen on Zomato.</p>
+      <a href="https://zomato.onelink.me/xqzv/lyivm3mg" class="order-btn" target="_blank">Order Now</a>
+    </div>
+
+    <!-- Miraj -->
+    <div class="order-card">
+      <h3>Hotel Adi - Miraj</h3>
+      <p>Delicious meals from Miraj branch, delivered fast.</p>
+      <a href="https://www.zomato.com/your-miraj-link" class="order-btn" target="_blank">Order Now</a>
+    </div>
+
+    <!-- Cafe: Jaisingpur -->
+    <div class="order-card">
+      <h3>Adi's Cafe - Jaisingpur</h3>
+      <p>Coffee & snacks from our Jaisingpur cafe.</p>
+      <a href="https://zomato.onelink.me/xqzv/bx9mm7fx" class="order-btn" target="_blank">Order Now</a>
+    </div>
+
+    <!-- Kolhapur -->
+    <div class="order-card">
+      <h3>Adi's Cafe - Kolhapur</h3>
+      <p>Kolhapur's best coffee and more on Zomato.</p>
+      <a href="https://zomato.onelink.me/xqzv/dygafgxu " class="order-btn" target="_blank">Order Now</a>
+    </div>
+  
+
+    <!-- Ichalkaranji -->
+    <div class="order-card">
+      <h3>Adi's Cafe - Ichalkaranji</h3>
+      <p>Your favorite cafe items, now online.</p>
+      <a href="https://zomato.onelink.me/xqzv/tr2yieso " class="order-btn" target="_blank">Order Now</a>
+    </div>
+  </div>
+    
+
+  <footer>
+    <small>&copy; 2025 C.A.M. All rights reserved.</small>
+    <div class="contact-info">
+      <p>Email: keripalechinmay@gmail.com</p>
+      <p>Phone: +91 9130091352</p>
+    </div>
+  </footer>
+</body>
 </html>
