@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Table Reservation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-utensils"></i> Fine Dining Restaurant</h1>
+      <p>Make your reservation easily online</p>
+    </header>
+
+    <main>
+      <div class="reservation-form">
+        <h2>Reserve a Table</h2>
+        <form id="reservationForm" action="reserve.php" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Full Name" required />
+            <div class="error-message" id="nameError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+            <div class="error-message" id="emailError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g., 555-123-4567" required />
+            <div class="error-message" id="phoneError"></div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="date">Reservation Date</label>
+              <input type="date" id="date" name="date" required />
+              <div class="error-message" id="dateError"></div>
+            </div>
+
+            <div class="form-group half">
+              <label for="time">Reservation Time</label>
+              <select id="time" name="time" required>
+                <option value="">Select a time</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="11:30">11:30 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="12:30">12:30 PM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="13:30">1:30 PM</option>
+                <option value="18:00">6:00 PM</option>
+                <option value="18:30">6:30 PM</option>
+                <option value="19:00">7:00 PM</option>
+                <option value="19:30">7:30 PM</option>
+                <option value="20:00">8:00 PM</option>
+                <option value="20:30">8:30 PM</option>
+              </select>
+              <div class="error-message" id="timeError"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="guests">Number of Guests</label>
+              <select id="guests" name="guests" required>
+                <option value="">Select</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5 People</option>
+                <option value="6">6 People</option>
+                <option value="7">7 People</option>
+                <option value="8">8 People</option>
+              </select>
+              <div class="error-message" id="guestsError"></div>
+            </div>
+
+            <div class="form-group half">
+              <label for="seating">Seating Preference</label>
+              <select id="seating" name="seating">
+                <option value="no_preference">No Preference</option>
+                <option value="indoor">Indoor</option>
+                <option value="outdoor">Outdoor (Weather Permitting)</option>
+                <option value="bar">Bar Area</option>
+                <option value="private">Private Room (6+ Guests)</option>
+              </select>
+              <!-- ✅ FIX: Add the missing error message element -->
+              <div class="error-message" id="seatingError"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="special_requests">Special Requests</label>
+            <textarea id="special_requests" name="special_requests" placeholder="Dietary requirements, special occasions, etc." rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" id="submitBtn" class="btn-primary">
+              <i class="fas fa-calendar-check"></i> Confirm Reservation
+            </button>
+          </div>
+
+          <div id="formStatus" class="status-message" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <div class="reservation-info">
+        <h3>Reservation Information</h3>
+        <p><i class="fas fa-clock"></i> <strong>Opening Hours:</strong></p>
+        <ul>
+          <li>Lunch: 11:00 AM - 2:30 PM (Tuesday - Sunday)</li>
+          <li>Dinner: 6:00 PM - 10:00 PM (Tuesday - Sunday)</li>
+          <li>Closed on Mondays</li>
+        </ul>
+        
+        <p><i class="fas fa-info-circle"></i> <strong>Reservation Policy:</strong></p>
+        <ul>
+          <li>Reservations can be made up to 30 days in advance</li>
+          <li>For parties larger than 8, please call us directly</li>
+          <li>We hold your table for 15 minutes after reservation time</li>
+          <li>Cancellations should be made at least 24 hours in advance</li>
+        </ul>
+        
+        <p><i class="fas fa-phone"></i> <strong>Contact Us:</strong></p>
+        <p>For any questions or special arrangements, please call us at (555) 123-4567</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Fine Dining Restaurant. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
